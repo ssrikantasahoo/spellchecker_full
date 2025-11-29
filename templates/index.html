@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITS Pilani – SpellChecker AI</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Playfair+Display:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <!-- Premium BITS Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="/static/images/bits_logo.png" class="bits-logo" alt="BITS Pilani Logo">
+            <span class="nav-title">SpellChecker AI</span>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+
+        <!-- EDITOR CARD -->
+        <section class="card editor-card glass">
+            <h2 class="section-title">AI-Powered Spell Checking</h2>
+
+            <!-- Clean Grammarly-style editor with placeholder inside -->
+            <textarea id="editor" class="editor-input" placeholder="Type or paste your text here..."></textarea>
+
+
+            <button class="primary-btn" onclick="checkSpell()">Run Spell Check</button>
+
+            <div id="loader" class="loader hidden"></div>
+
+            <p class="info-text">
+                Your text will be analyzed using <b>PySpellChecker + NLP techniques</b> with contextual suggestions.
+            </p>
+        </section>
+
+        <!-- RESULTS CARD -->
+        <section class="card results-card glass">
+            <h2 class="section-title">Results</h2>
+
+            <div class="result-block">
+                <h3>Corrected Text (AI-Processed)</h3>
+                <div id="correctedOutput" class="corrected-box"></div>
+            </div>
+
+            <div class="result-block">
+                <h3>Misspelled Words & Suggestions</h3>
+                <ul id="misspelledList" class="miss-list"></ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

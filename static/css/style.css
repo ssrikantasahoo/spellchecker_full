@@ -1,0 +1,187 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f7f8fa;
+}
+
+/* NAVBAR (BITS PILANI BRANDING) */
+.navbar {
+    background: #800000;
+    /* BITS maroon */
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bits-logo {
+    width: 55px;
+}
+
+.nav-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #fff6d8;
+    font-weight: 600;
+}
+
+/* MAIN GRID */
+.main-wrapper {
+    max-width: 1250px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    padding: 0 20px;
+}
+
+/* CARDS WITH GLASS EFFECT */
+.glass {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+}
+
+.card {
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+/* TEXTAREA LABEL – FIXED ALIGNMENT */
+.editor-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    display: block;
+}
+
+/* TEXTAREA */
+.editor-input {
+    width: 100%;
+    height: 260px;
+    border: 2px solid #b7c8e1;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 15px;
+    resize: vertical;
+    background: #ffffff;
+    transition: 0.25s;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    width: calc(100% - 24px);
+}
+
+.editor-input:focus {
+    border-color: #005bbb;
+    box-shadow: 0 0 6px rgba(0, 91, 187, 0.25);
+    outline: none;
+}
+
+/* BUTTON */
+.primary-btn {
+    background: #005bbb;
+    color: #fff;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.primary-btn:hover {
+    background: #003f7f;
+    transform: translateY(-2px);
+}
+
+/* INFO BANNER */
+.info-text {
+    margin-top: 20px;
+    background: #eef4ff;
+    border-left: 4px solid #005bbb;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #444;
+    font-style: italic;
+}
+
+/* RESULT PANELS */
+.corrected-box {
+    background: #f1f7ff;
+    padding: 14px;
+    min-height: 100px;
+    border-radius: 10px;
+    color: #222;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.miss-list li {
+    margin-bottom: 8px;
+    color: #b30000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* LOADER */
+.loader {
+    border: 5px solid #ddd;
+    border-top: 5px solid #005bbb;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* TOAST */
+.toast {
+    visibility: hidden;
+    min-width: 300px;
+    background: #222;
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 100;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}

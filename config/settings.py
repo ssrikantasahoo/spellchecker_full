@@ -1,0 +1,1 @@
+class Config: SECRET_KEY='secure'; DEBUG=True
