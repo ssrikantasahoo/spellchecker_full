@@ -33,6 +33,8 @@ class SpellCheckerService:
         for token in tokens:
             if token in misspelled:
                 corr = self.spell.correction(token)
+                if corr is None:
+                    corr = token
                 suggestions[token] = corr
                 corrected_tokens.append(corr)
             else:

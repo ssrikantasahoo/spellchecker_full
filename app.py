@@ -23,4 +23,12 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(host='0.0.0.0', port=5000)
+
+    print("\n======================================")
+    print("🚀 Flask Server is Live!")
+    print("👉 Open: http://localhost:5000")
+    print("👉 Open: http://127.0.0.1:5000")
+    print("======================================\n")
+    
+    app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False)
+
